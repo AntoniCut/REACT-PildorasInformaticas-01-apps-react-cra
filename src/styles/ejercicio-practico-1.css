@@ -1,0 +1,54 @@
+/*  ********************************************************************************************  */
+/*  **********  /00-apps-react-pildorasinformaticas/src/css/ejercicio-practico-1.css  **********  */
+/*  ********************************************************************************************  */
+
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    /* text-align: center; */
+    /* background: white; */
+    background-color: #61DAFB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .desplegable{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+  
+  }
+
+  input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #282C34;
+  }
+  

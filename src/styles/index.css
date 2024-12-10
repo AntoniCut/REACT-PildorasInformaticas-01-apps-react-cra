@@ -1,0 +1,181 @@
+/*  ********************************************************************************  */
+/*  **********  /00-apps-react-pildorasinformaticas/src/styles/index.css  **********  */
+/*  ********************************************************************************  */
+
+
+@import './headerComponent.css';
+@import './headerResponsive.css';
+@import './logoAplicacion.css';
+@import './logoReact.css';
+@import './tituloAplicacion.css';
+@import './ejercicio-practico-1.css';
+
+
+body {
+    margin: 0;
+    background-color: #282c34;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, ul, span {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.App {
+    text-align: center;
+}
+
+hr {
+    width: 90%;
+    height: 5px;
+}
+
+
+
+
+.App-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color: #282c34;
+    padding-bottom: 100px;
+}
+
+
+.component__container {
+    width: 60%;
+}
+
+
+
+
+label {
+    color: white;
+}
+
+
+/*  *****  Navegacion - Router  *****  */
+
+.navbar-header {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.navbar-header a {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+
+/*  ***********************************  */
+
+
+
+
+
+.titulo-contenido {
+    width: 70%;
+    height: 50px;
+    margin-top: 30px;
+    /* margin-left: 100px; */
+    /* margin-bottom: 20px; */
+    background-color: #61dafb;
+}
+
+.titulo {
+    /* margin-left: 600px;
+  margin-top: 50px; */
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #282c34;
+    /* color: white; */
+}
+
+.resultado {
+    font-size: 24px;
+    color: white;
+}
+
+
+
+/*  *****  Contador  *****  */
+.contador {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contador-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contador-inferior {
+    margin-top: -40px;
+}
+
+.marcador-contador {
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-contador {
+    width: 50px;
+    height: 20px;
+    line-height: 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-reset {
+    width: 100px;
+}
+
+
+/*  *****  styled-components  *****  */
+.styled-components {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
