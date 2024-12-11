@@ -38,7 +38,7 @@ export const UseState = () => {
             <button onClick={botonPulsado} style={{
                 marginTop: "30px",
                 marginLeft: "10px"
-            }} className="boton"> Púlsame </button>
+            }} className="btn-state"> Púlsame </button>
 
             <div> {elemento1} </div>
             <div> {resultado != null && <h2> El resultado es: {resultado} </h2>} </div>

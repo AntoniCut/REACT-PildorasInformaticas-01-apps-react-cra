@@ -30,11 +30,10 @@ export const ComponenteMultiple = ({ opcion , dias }) => {
         <div>
             
             {(
-                opcion === 1 
-                    ? calculoCosteHotel() 
-                    : opcion === 2 
-                    ? calculoAlquilerCoche() 
-                    : "")}
+                opcion === 1 ? calculoCosteHotel() 
+                : opcion === 2 ? calculoAlquilerCoche() 
+                : ""
+            )}
 
         </div>
     )

@@ -3,21 +3,25 @@
 //  ************************************
 
 
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import './App.css';
-import { HeaderComponent } from './HeaderComponent/jsx/HeaderComponent.jsx';
-import { Titulo } from './components/00-Titulo.jsx';
-import { UseState } from './components/01-UseState.jsx';
-import { UseRef } from './components/02-UseRef.jsx';
-import { ConversorEuroDolar } from './components/03-ConversorEuroDolar.jsx';
-import { Arrays } from './components/04-Arrays.jsx';
-import { Contador } from './components/05-Contador.jsx';
-import { Saludo } from './components/06-Saludo.jsx';
-import { RenderizadoCondicional } from './components/07-RenderizadoCondicional.jsx';
-import { EjercicioPractico1 } from './components/08-EjercicioPractico1.jsx';
-import { Boton, MiCaja } from './components/09-styled.js';
+import {
+    HeaderComponent,
+    NavBarLink,
+    Titulo,
+    UseState,
+    UseRef,
+    ConversorEuroDolar,
+    Arrays,
+    Contador,
+    Saludo,
+    RenderizadoCondicional,
+    EjercicioPractico1,
+    AppMemorizarTexto
+} from './components';
 
+import { MiCaja, MiBoton, MiBotonProps } from './styled-components/09-styled';
+import { MiBotonLargo, MiBotonLargo2 } from './styled-components/09-styled2';
 
 
 //  ----------  Definición de Objetos  ----------
@@ -53,22 +57,7 @@ export const App = () => {
             {/* **********  Cabecera del Proyecto  ********** */}
             <HeaderComponent />
 
-            <nav className='navbar-header'>
-                {/* <Link to='/'> HOME </Link> */}
-                <Link to='/use-state'> Use State </Link>
-                <Link to='/use-ref'> Use Ref </Link>
-                <Link to='/conversor-euro-dolar'> Conversor Euro Dolar </Link>
-                <Link to='/arrays'> Arrays </Link>
-                <Link to='/contador'> Contador </Link>
-                <Link to='/saludo'> Saludo </Link>
-                <Link to='/renderizado-condicional'> Renderizado Condicional </Link>
-                <Link to='/ejercicio-practico-1'> Ejercicio Practico 1 </Link>
-                <Link to='/styled-components'> Styled Components </Link>
-
-
-                <Link to='/404'> Not Exist Route </Link>
-            </nav>
-
+            <NavBarLink />
 
             {/* **********  Contenido Principal de la Aplicación  ********** */}
             <main className="App-main">
@@ -83,7 +72,7 @@ export const App = () => {
                         path="/use-state"
                         element={
                             <>
-                                { document.title = 'Use State' }
+                                {document.title = 'Use State'}
                                 <Titulo nameTitulo="----------  1. Use State  ----------" />
                                 <UseState />
                             </>
@@ -97,7 +86,7 @@ export const App = () => {
                         path="/use-ref"
                         element={
                             <>
-                                { document.title = 'Use Ref' }
+                                {document.title = 'Use Ref'}
                                 <Titulo nameTitulo="----------  2. Use Ref  ----------" />
                                 <UseRef />
                             </>
@@ -184,13 +173,28 @@ export const App = () => {
                     <Route
                         path="/styled-components"
                         element={
-                            
+
                             <>
                                 <Titulo nameTitulo="----------  9. Styled Components  ----------" />
                                 <div className='styled-components'>
                                     <MiCaja> Mi Caja </MiCaja>
-                                    <Boton> Entrar </Boton>
+                                    <MiBoton> Entrar </MiBoton>
+                                    <MiBotonProps entrar={false}> Entrar - props </MiBotonProps>
+                                    <MiBotonLargo> Salir </MiBotonLargo>
+                                    <MiBotonLargo2> Warning </MiBotonLargo2>
                                 </div>
+                            </>
+                        }
+                    />
+
+                    {/* **********  10. App Recopilatoria  **********/}
+                    <Route
+                        path="/app-memorizar-texto"
+                        element={
+
+                            <>
+                                <Titulo nameTitulo="----------  10. App Recopilatoria  ----------" />
+                                <AppMemorizarTexto />
                             </>
                         }
                     />

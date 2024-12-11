@@ -3,7 +3,7 @@
 //  **************************************************************
 
 
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 
 
@@ -53,7 +53,7 @@ export const ConversorEuroDolar = () => {
       <div>
           <h1> Conversor Euro-Dolar </h1>
           <input type='text' ref = {euroRef} className='centrarElementos' /> <br/>
-          <button onClick = {calcular} className='centrarElementos' > Convertir </button> <br/>
+          <button onClick = {calcular} className='btn-conversor' > Convertir </button> <br/>
           <div ref = {resultadoRef} className='resultado' > </div>
       </div>
                                                                   

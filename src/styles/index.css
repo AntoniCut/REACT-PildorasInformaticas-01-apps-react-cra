@@ -4,16 +4,23 @@
 
 
 @import './headerComponent.css';
-@import './headerResponsive.css';
-@import './logoAplicacion.css';
+@import './Navbarlink.css';
 @import './logoReact.css';
-@import './tituloAplicacion.css';
 @import './ejercicio-practico-1.css';
 
 
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
-    background-color: #282c34;
+    padding: 0;
+}
+
+body {
+    background-image: url('../../public/background.avif');
+    background-size: cover;  /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    background-position: center center;  /* Centra la imagen */
+    height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -28,21 +35,18 @@ code {
 
 
 h1, h2, h3, h4, h5, h6, p, ul, span {
-    color: white;
+    color: #666666;
     margin: 0;
     padding: 0;
 }
 
 
-
-
-
-* {
-    box-sizing: border-box;
-}
+/*  *********************************************************************  */
 
 .App {
     text-align: center;
+    width: 75%;
+    margin: 10px auto;
 }
 
 hr {
@@ -59,7 +63,7 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    background-color: #282c34;
+    /* background-color: #282c34; */
     padding-bottom: 100px;
 }
 
@@ -78,25 +82,7 @@ label {
 
 /*  *****  Navegacion - Router  *****  */
 
-.navbar-header {
-    position: absolute;
-    top: 200px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
 
-}
-
-.navbar-header a {
-    width: 200px;
-    height: 30px;
-    line-height: 30px;
-    color: #ffffff;
-    background-color: cornflowerblue;
-    text-decoration: none;
-}
 
 /*  ***********************************  */
 
@@ -105,7 +91,7 @@ label {
 
 
 .titulo-contenido {
-    width: 70%;
+    width: 100%;
     height: 50px;
     margin-top: 30px;
     /* margin-left: 100px; */
@@ -119,7 +105,7 @@ label {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    color: #282c34;
+    /* color: #282c34; */
     /* color: white; */
 }
 
@@ -157,25 +143,59 @@ label {
     font-weight: bold;
 }
 
-.btn-contador {
-    width: 50px;
-    height: 20px;
-    line-height: 0px;
+.btn-state,
+.btn-ref,
+.btn-contador,
+.btn-reset,
+.btn-conversor {
+    min-width: 150px;
+    padding: 15px 20px;
     font-size: 24px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(153, 197, 241);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+        -4px -4px 10px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease-in-out;
 }
 
-.btn-reset {
-    width: 100px;
+.btn-state:hover,
+.btn-ref:hover,
+.btn-contador:hover,
+.btn-reset:hover,
+.btn-conversor:hover {
+    background-color: rgb(119, 154, 189);
 }
 
 
 /*  *****  styled-components  *****  */
+
 .styled-components {
     width: 100%;
-    height: 400px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+
+/*  *****  app-memorizar-texto  *****  */
+
+.app-memorizar-texto {
+    width: 100%;
+    min-height: 400px;
+    background-color: #6D0C4F;
+}
+
+.memorizar__title {
+    margin-bottom: 50px;
+    font-size: 54px;
+    color: #ffffff;   
+}
+
+.mostrar-parrafo {
+    font-size: 36px;
+    color: antiquewhite;
 }

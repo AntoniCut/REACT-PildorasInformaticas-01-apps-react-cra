@@ -34,8 +34,8 @@ export const UseRef = () => {
 
             <div>
                 <br />
-                <button onClick={videoPlay}> Play </button>
-                <button onClick={videoPause}> Pause </button>
+                <button className="btn-ref" onClick={videoPlay}> Play </button> <br/> <br/>
+                <button className="btn-ref" onClick={videoPause}> Pause </button>
             </div>
 
         </div>
